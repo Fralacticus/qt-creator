@@ -34,24 +34,7 @@ jobs:
             environment_script: "C:/Program Files/Microsoft Visual Studio/2022/Enterprise/VC/Auxiliary/Build/vcvars64.bat",
             is_msvc: true
           }
-        - {
-            name: "Windows Latest MinGW", artifact: "windows-x64-mingw",
-            os: windows-latest,
-            toolchain: "https://\\${qt_mirror}/online/qtsdkrepository/windows_x86/desktop/tools_mingw1310/qt.tools.win64_mingw1310/13.1.0-202407240918mingw1310.7z",
-            toolchain_path: "Tools/mingw1310_64/bin",
-            cc: "gcc", cxx: "g++",
-            is_msvc: false
-          }
-        - {
-            name: "Ubuntu Latest GCC", artifact: "linux-x64",
-            os: ubuntu-latest,
-            cc: "gcc", cxx: "g++"
-          }
-        - {
-            name: "macOS Latest Clang", artifact: "macos-universal",
-            os: macos-latest,
-            cc: "clang", cxx: "clang++"
-          }
+
 
     steps:
     - uses: actions/checkout@v4
